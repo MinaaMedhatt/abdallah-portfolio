@@ -108,8 +108,9 @@ export default function About() {
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+          {/* Name, Role, Social Links Section */}
           <Column
-            id={about.intro.title}
+            id={about.intro.title} // This ID is used by TableOfContents
             fillWidth
             minHeight="160"
             vertical="center"
@@ -140,12 +141,10 @@ export default function About() {
                 />
               </Flex>
             )}
-            <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
-              <Heading className={styles.textAlign} variant="display-strong-xl">
-                {person.name}
-              </Heading>
-            </RevealFx>
-            <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
+            <Heading className={styles.textAlign} variant="display-strong-xl">
+              {person.name}
+            </Heading>
+            <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
@@ -155,11 +154,10 @@ export default function About() {
             </Text>
     </RevealFx>
             {social.length > 0 && (
-              <RevealFx delay={0.4} paddingTop="12" horizontal="center">
-                <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth data-border="rounded">
-                  {social.map(
-                    (item) =>
-                      item.link && (
+              <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth data-border="rounded">
+                {social.map(
+                  (item) =>
+                    item.link && (
                         <React.Fragment key={item.name}>
                             <Button
                                 className="s-flex-hide"
@@ -193,19 +191,16 @@ export default function About() {
 
           {about.work.display && (
             <>
-              <RevealFx translateY="12" delay={0.8} fillWidth horizontal="start">
-                <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
-                  {about.work.title}
-                </Heading>
-              </RevealFx>
-              <RevealFx translateY="16" delay={1.0} fillWidth>
-                <Column fillWidth gap="l" marginBottom="40">
-                  {about.work.experiences.map((experience, index) => (
-                    <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                      <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                        <Text id={experience.company} variant="heading-strong-l">
-                          {experience.company}
-                        </Text>
+              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+                {about.work.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.work.experiences.map((experience, index) => (
+                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
+                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                      <Text id={experience.company} variant="heading-strong-l">
+                        {experience.company}
+                      </Text>
                       <Text variant="heading-default-xs" onBackground="neutral-weak">
                         {experience.timeframe}
                       </Text>
@@ -258,18 +253,15 @@ export default function About() {
 
           {about.studies.display && (
             <>
-              <RevealFx translateY="12" delay={1.2} fillWidth horizontal="start">
-                <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                  {about.studies.title}
-                </Heading>
-              </RevealFx>
-              <RevealFx translateY="16" delay={1.4} fillWidth>
-                <Column fillWidth gap="l" marginBottom="40">
-                  {about.studies.institutions.map((institution, index) => (
-                    <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                      <Text id={institution.name} variant="heading-strong-l">
-                        {institution.name}
-                      </Text>
+              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+                {about.studies.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.studies.institutions.map((institution, index) => (
+                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
+                    <Text id={institution.name} variant="heading-strong-l">
+                      {institution.name}
+                    </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
@@ -281,54 +273,50 @@ export default function About() {
 
           {about.technical.display && (
             <>
-              <RevealFx translateY="12" delay={1.6} fillWidth horizontal="start">
-                <Heading
-                  as="h2"
-                  id={about.technical.title}
-                  variant="display-strong-s"
-                  marginBottom="40"
-                >
-                  {about.technical.title}
-                </Heading>
-              </RevealFx>
-              <RevealFx translateY="16" delay={1.8} fillWidth>
-                <Column fillWidth gap="l">
-                  {about.technical.skills.map((skill, index) => (
-                    <Column key={`${skill}-${index}`} fillWidth gap="4">
-                      <Text variant="heading-strong-l">{skill.title}</Text>
+              <Heading
+                as="h2"
+                id={about.technical.title}
+                variant="display-strong-s"
+                marginBottom="40"
+              >
+                {about.technical.title}
+              </Heading>
+              <Column fillWidth gap="l">
+                {about.technical.skills.map((skill, index) => (
+                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                    <Text variant="heading-strong-l">{skill.title}</Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
-                      {skill.images && skill.images.length > 0 && (
-                        <Flex fillWidth paddingTop="m" gap="12" wrap>
-                          {skill.images.map((image, index) => (
-                            <Flex
-                              key={index}
-                              border="neutral-medium"
+                    {skill.images && skill.images.length > 0 && (
+                      <Flex fillWidth paddingTop="m" gap="12" wrap>
+                        {skill.images.map((image, index) => (
+                          <Flex
+                            key={index}
+                            border="neutral-medium"
+                            radius="m"
+                            //@ts-ignore
+                            minWidth={image.width}
+                            //@ts-ignore
+                            height={image.height}
+                          >
+                            <SmartImage
+                              enlarge
                               radius="m"
                               //@ts-ignore
-                              minWidth={image.width}
+                              sizes={image.width.toString()}
                               //@ts-ignore
-                              height={image.height}
-                            >
-                              <SmartImage
-                                enlarge
-                                radius="m"
-                                //@ts-ignore
-                                sizes={image.width.toString()}
-                                //@ts-ignore
-                                alt={image.alt}
-                                //@ts-ignore
-                                src={image.src}
-                              />
-                            </Flex>
-                          ))}
-                        </Flex>
-                      )}
-                    </Column>
-                  ))}
-                </Column>
-              </RevealFx>
+                              alt={image.alt}
+                              //@ts-ignore
+                              src={image.src}
+                            />
+                          </Flex>
+                        ))}
+                      </Flex>
+                    )}
+                  </Column>
+                ))}
+              </Column>
             </>
           )}
         </Column>
