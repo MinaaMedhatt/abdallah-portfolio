@@ -10,6 +10,7 @@ import {
   Tag,
   Text,
   LetterFx,
+  RevealFx,
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -142,6 +143,7 @@ export default function About() {
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
+            <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
@@ -149,7 +151,7 @@ export default function About() {
             >
         {person.role}
             </Text>
-    
+    </RevealFx>
             {social.length > 0 && (
               <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth data-border="rounded">
                 {social.map(
