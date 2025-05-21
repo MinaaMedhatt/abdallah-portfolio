@@ -39,6 +39,7 @@ import {
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaSquareUpwork  } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
+  upwork: FaSquareUpwork,
   chevronUp: HiChevronUp,
   chevronDown: HiChevronDown,
   chevronRight: HiChevronRight,
