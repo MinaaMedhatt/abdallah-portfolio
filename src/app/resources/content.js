@@ -8,7 +8,7 @@ const person = {
   },
   role:
     "AI Agents Builder",
-  avatar: "/images/profile-pic2.png",
+  avatar: "/images/profile-pic.png",
   email: "abdallahgeorgee@gmail.com",
   location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Arabic"], // optional: Leave the array empty if you don't want to display languages
