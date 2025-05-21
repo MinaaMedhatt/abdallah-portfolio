@@ -10,8 +10,8 @@ const person = {
   speed="medium"
   trigger="instant"
   charset="X$@aHz0y#?*01+">
-    Spice up your landing page with special effects
-</LetterFx>"AI Agents Builder",
+    "AI Agents Builder"
+</LetterFx>,
   avatar: "/images/profile-pic2.png",
   email: "abdallahgeorgee@gmail.com",
   location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
