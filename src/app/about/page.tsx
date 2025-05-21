@@ -146,12 +146,7 @@ export default function About() {
               variant="display-default-xs"
               onBackground="neutral-weak"
             >
-        <LetterFx
-              speed="medium"
-              trigger="instant"
-              charset="X$@aHz0y#?*01+">
-              {person.role}
-         </LetterFx>
+        {person.role}
             </Text>
             {social.length > 0 && (
               <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth data-border="rounded">
