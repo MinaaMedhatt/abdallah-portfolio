@@ -39,7 +39,7 @@ const font = {
 
 const style = {
   theme: "dark", // theme is not necessary when using ThemeProvider (default)
-  neutral: "slate", // sand | gray | slate
+  neutral: "gray", // sand | gray | slate
   brand: "magenta", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "indigo", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast
@@ -82,7 +82,7 @@ const effects = {
     height: "0.25rem",
   },
   lines: {
-    display: false,
+    display: true,
     opacity: 100,
     color: "neutral-alpha-weak",
     size: "16",
