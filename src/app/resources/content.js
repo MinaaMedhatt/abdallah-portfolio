@@ -28,7 +28,7 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "UpWork",
+    name: "Upwork",
     icon: "upwork",
     link: "https://www.upwork.com/freelancers/~012a1427a7a3c7ae56",
   },
