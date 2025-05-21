@@ -151,7 +151,7 @@ export default function About() {
   speed="medium"
   trigger="instant"
   charset="X$@aHz0y#?*01+">
-    {person.role}
+    person.role
 </LetterFx> 
             </Text>
             {social.length > 0 && (
