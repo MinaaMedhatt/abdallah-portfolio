@@ -6,12 +6,8 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: <LetterFx
-  speed="medium"
-  trigger="instant"
-  charset="X$@aHz0y#?*01+">
-    "AI Agents Builder"
-</LetterFx>,
+  role:
+    "AI Agents Builder",
   avatar: "/images/profile-pic2.png",
   email: "abdallahgeorgee@gmail.com",
   location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
