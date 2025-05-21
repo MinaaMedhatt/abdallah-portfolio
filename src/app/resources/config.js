@@ -12,7 +12,7 @@ const routes = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": false,
 };
 
 import { Geist } from "next/font/google";
@@ -40,8 +40,8 @@ const font = {
 const style = {
   theme: "dark", // theme is not necessary when using ThemeProvider (default)
   neutral: "gray", // sand | gray | slate
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
@@ -52,13 +52,13 @@ const style = {
 
 const effects = {
   mask: {
-    cursor: false,
+    cursor: true,
     x: 50,
     y: 0,
     radius: 100,
   },
   gradient: {
-    display: false,
+    display: true,
     opacity: 100,
     x: 50,
     y: 60,
@@ -124,14 +124,14 @@ const mailchimp = {
       color: "brand-on-background-weak",
     },
     grid: {
-      display: false,
+      display: true,
       opacity: 100,
       color: "neutral-alpha-medium",
       width: "0.25rem",
       height: "0.25rem",
     },
     lines: {
-      display: false,
+      display: true,
       opacity: 100,
       color: "neutral-alpha-medium",
       size: "16",
