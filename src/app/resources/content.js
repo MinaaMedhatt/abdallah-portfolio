@@ -6,22 +6,21 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role:
-    "AI Agents Builder",
-  avatar: "/images/profile-pic.png",
+  role: "AI Agent Builder", // Updated per brief
+  avatar: "/images/profile-pic.png", // Consider updating with a professional photo
   email: "abdallahgeorgee@gmail.com",
-  location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Arabic"], // optional: Leave the array empty if you don't want to display languages
+  location: "Africa/Cairo",
+  languages: ["English", "Arabic"],
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to My AI Insights</>, // Updated
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
+      Stay updated with the latest in AI automation, agentic workflows, and how they can
+      revolutionize your business.
+    </> // Updated
   ),
 };
 
@@ -41,7 +40,7 @@ const social = [
   {
     name: "X",
     icon: "x",
-    link: "",
+    link: "", // Ensure this is updated if you have an X profile
   },
   {
     name: "Email",
@@ -52,35 +51,36 @@ const social = [
 
 const home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/home.jpg", // Consider updating OG image to reflect AI theme
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `${person.name} – AI Agent Builder`, // Updated
+  description: `Building intelligent AI agents and autonomous workflows for e-commerce, sales, marketing, and customer service.`, // Updated
+  headline: <>Transforming Businesses with Autonomous AI Solutions</>, // Updated
   featured: {
-    display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    display: true, // Consider changing this to a relevant AI project/case study
+    title: <>Featured Project: AI-Powered Customer Service Agent</>, // Example, update as needed
+    href: "/work/ai-customer-service-agent", // Example, update as needed
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
+      I'm Abdallah George, an AI Agent Builder specializing in creating autonomous intelligence
+      <br />
+      and predictive capabilities to optimize your business operations.
+    </> // Updated
   ),
 };
 
 const about = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: `About Me – ${person.name}, AI Agent Builder`, // Updated
+  description: `Learn about my vision and expertise in building AI-driven solutions.`, // Updated
   tableOfContent: {
     display: true,
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: true, // Ensure a professional, approachable photo is used
   },
   calendar: {
     display: true,
@@ -88,13 +88,15 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "My Vision & Approach", // Updated
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
+        As an AI Agent Builder, my passion lies in crafting intelligent automation and agentic
+        workflows that deliver tangible results. I focus on developing bespoke AI solutions for
+        e-commerce, sales, marketing, and customer service, helping businesses unlock new levels
+        of efficiency and innovation. My approach is direct, results-driven, and centered on
+        your specific needs.
+      </> // Updated
     ),
   },
   work: {
